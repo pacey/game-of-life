@@ -1,9 +1,9 @@
-define(["marionette", "jquery", "handlebars", "game/row/rowCollectionView"], function(Marionette, $, Handlebars, RowCollectionView){
-	return Marionette.CompositeView.extend({
+GameOfLife.module("Game", function(Game, GameOfLife, Backbone, Marionette, $, _){
+	Game.GridView = Marionette.CompositeView.extend({
 		template: Handlebars.compile($("#gridTemplate").html()),
 		tagName: "table",
 		className: "table-bordered",
-		itemView: RowCollectionView,
+		itemView: Game.RowCollectionView,
 		itemViewContainer: "tbody"
 	});
 });

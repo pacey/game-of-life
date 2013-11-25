@@ -1,5 +1,5 @@
-define(["marionette"], function(Marionette){
-	return Marionette.ItemView.extend({
+GameOfLife.module("Game", function(Game, GameOfLife, Backbone, Marionette, $, _){
+	Game.CellView = Marionette.ItemView.extend({
 		template: function(){
 			return "";
 		},

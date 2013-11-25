@@ -1,5 +1,5 @@
-define(["backbone", "game/row/row"], function(Backbone, Row){
-	return Backbone.Collection.extend({
-		model: Row
+GameOfLife.module("Game", function(Game, GameOfLife, Backbone, Marionette, $, _){
+	Game.RowCollection = Backbone.Collection.extend({
+		model: Game.Row
 	});
 });

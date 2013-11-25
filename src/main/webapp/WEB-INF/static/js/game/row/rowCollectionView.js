@@ -1,8 +1,8 @@
-define(["marionette", "game/cell/cellView"], function(Marionette, CellView){
-	return Marionette.CollectionView.extend({
+GameOfLife.module("Game", function (Game, GameOfLife, Backbone, Marionette, $, _) {
+	Game.RowCollectionView = Marionette.CollectionView.extend({
 		tagName: "tr",
-		itemView: CellView,
-		initialize: function(){
+		itemView: Game.CellView,
+		initialize: function () {
 			this.collection = this.model.get("cellCollection");
 		}
 	});
