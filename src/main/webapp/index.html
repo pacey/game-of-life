@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game of Life</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="css/gameOfLife.css">
+</head>
+<body>
+    <script id="gridTemplate" type="text/x-handlebars-template" >
+        <tbody></tbody>
+    </script>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 class="text-center">Game of Life</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="gameRegion"></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12" id="controlRegion"></div>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/libs/underscore.js"></script>
+    <script type="text/javascript" src="js/libs/jquery-2.0.3.js"></script>
+    <script type="text/javascript" src="js/libs/handlebars-v1.1.2.js"></script>
+    <script type="text/javascript" src="js/libs/backbone.js"></script>
+    <script type="text/javascript" src="js/libs/backbone.marionette.js"></script>
+    <script type="text/javascript" src="js/gameOfLife.js"></script>
+    <script type="text/javascript" src="js/game/cell/cell.js"></script>
+    <script type="text/javascript" src="js/game/cell/cellCollection.js"></script>
+    <script type="text/javascript" src="js/game/cell/cellView.js"></script>
+    <script type="text/javascript" src="js/game/row/row.js"></script>
+    <script type="text/javascript" src="js/game/row/rowCollection.js"></script>
+    <script type="text/javascript" src="js/game/row/rowCollectionView.js"></script>
+    <script type="text/javascript" src="js/game/gridView.js"></script>
+    <script type="text/javascript" src="js/game/controller.js"></script>
+</body>
+</html>

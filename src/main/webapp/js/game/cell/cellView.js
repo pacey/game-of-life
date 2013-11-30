@@ -10,8 +10,19 @@ GameOfLife.module("Game", function(Game, GameOfLife, Backbone, Marionette, $, _)
 		events: {
 			"click": "onClick"
 		},
+		modelEvents: {
+			"change": "onModelChange"
+		},
 		onClick: function(){
 			this.model.toggleState();
+		},
+		onModelChange: function(){
+			if(this.model.get("state") === "ALIVE"){
+				this.$el.removeClass("dead").addClass("alive");
+			}
+			else{
+				this.$el.removeClass("alive").addClass("dead");
+			}
 		}
 	});
 });

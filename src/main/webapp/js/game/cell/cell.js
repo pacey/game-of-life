@@ -10,7 +10,6 @@ GameOfLife.module("Game", function(Game, GameOfLife, Backbone, Marionette, $, _)
 			else{
 				this.set("state", "ALIVE");
 			}
-			console.log("Toggled state from " + this.previousAttributes().state + " to " + this.get("state") + " for cell " + this.get("row") + "," + this.get("column"));
 		}
 	});
 });
