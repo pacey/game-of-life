@@ -11,6 +11,16 @@
     <script id="gridTemplate" type="text/x-handlebars-template" >
         <tbody></tbody>
     </script>
+	<script id="controlTemplate" type="text/x-handlebars-template" >
+		<button type="button" class="btn {{#if playing}}btn-danger{{else}}btn-primary{{/if}} play">
+			{{#if playing}}
+				Stop
+			{{else}}
+				Play
+			{{/if}}
+		</button>
+		<button type="button" class="btn btn-default step">Step</button>
+	</script>
     <div class="container">
         <div class="row">
             <div class="col-md-12">
@@ -21,7 +31,7 @@
             <div class="col-md-12" id="gameRegion"></div>
         </div>
         <div class="row">
-            <div class="col-md-12" id="controlRegion"></div>
+            <div class="col-md-12 text-center" id="controlRegion"></div>
         </div>
     </div>
     <script type="text/javascript" src="js/libs/underscore.js"></script>
@@ -38,5 +48,8 @@
     <script type="text/javascript" src="js/game/row/rowCollectionView.js"></script>
     <script type="text/javascript" src="js/game/gridView.js"></script>
     <script type="text/javascript" src="js/game/controller.js"></script>
+    <script type="text/javascript" src="js/control/controlModel.js"></script>
+    <script type="text/javascript" src="js/control/controlView.js"></script>
+    <script type="text/javascript" src="js/control/controlController.js"></script>
 </body>
 </html>
