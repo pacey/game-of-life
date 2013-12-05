@@ -7,21 +7,27 @@ GameOfLife.module("Control", function(Control, GameOfLife, Backbone, Marionette,
 			GameOfLife.controlRegion.show(controlView);
 			this.listenTo(controlView, "control:play", this.play);
 			this.listenTo(controlView, "control:step", this.step);
+			this.listenTo(controlView, "control:random", this.random);
+			this.listenTo(controlView, "control:reset", this.reset);
 		},
 		play: function(eventData){
 			if(eventData.model.get("playing")){
-				window.clearInterval(this.paintInterval);
+				GameOfLife.request("stop");
 				eventData.model.set("playing", false);
 			}
 			else{
-				this.paintInterval = window.setInterval(function(){
-					GameOfLife.request("step");
-				}, 25);
+				GameOfLife.request("play");
 				eventData.model.set("playing", true);
 			}
 		},
 		step: function(){
 			GameOfLife.request("step");
+		},
+		random: function(){
+			GameOfLife.request("randomise");
+		},
+		reset: function(){
+			GameOfLife.request("reset");
 		}
 	});
 	Control.addInitializer(function(){
