@@ -7,7 +7,7 @@ GameOfLife.addInitializer(function(options){
 });
 $(function(){
 	GameOfLife.start({
-		rows: 20,
-		columns: 20
+		rows: 50,
+		columns: 50
 	});
 });
